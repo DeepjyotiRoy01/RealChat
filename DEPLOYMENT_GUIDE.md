@@ -1,6 +1,6 @@
-# RealChat2 Deployment Guide
+# RealChat Deployment Guide
 
-This guide will help you deploy RealChat2 to production so others can access it via a public link.
+This guide will help you deploy RealChat to production so others can access it via a public link.
 
 ## 🚀 Quick Deployment Options
 
@@ -111,8 +111,8 @@ After deployment, you'll have:
 - **Frontend**: `https://your-app.vercel.app`
 - **Backend**: `https://your-app.railway.app`
 - **Admin Login**: 
-  - Name: `Deep`
-  - Phone: `7005461841`
+  - Name: `Change`
+  - Phone: `Change`
 
 ## 📱 Share with Others
 
@@ -175,4 +175,4 @@ If you encounter issues:
 
 ## 🎉 Success!
 
-Once deployed, your RealChat2 application will be accessible to anyone with the link, no installation required! 
+Once deployed, your RealChat application will be accessible to anyone with the link, no installation required! 
