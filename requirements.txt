@@ -1,0 +1,400 @@
+# RealChat2 - Requirements File
+# =============================
+# This file contains all requirements to run the RealChat2 project
+# Last updated: August 2024
+
+# =============================================================================
+# SYSTEM REQUIREMENTS
+# =============================================================================
+
+# Operating System
+# - Windows 10 or higher (64-bit)
+# - macOS 10.15 (Catalina) or higher
+# - Ubuntu 18.04 LTS or higher
+# - Any Linux distribution with Node.js support
+
+# Hardware Requirements
+# - RAM: 4GB minimum, 8GB recommended
+# - Storage: 2GB free disk space
+# - CPU: Dual-core processor or better
+# - Network: Stable internet connection
+
+# =============================================================================
+# PREREQUISITE SOFTWARE
+# =============================================================================
+
+# Node.js and npm
+# - Node.js: v18.0.0 or higher
+# - npm: v8.0.0 or higher
+# - Download from: https://nodejs.org/
+
+# Git
+# - Git: v2.0.0 or higher
+# - Download from: https://git-scm.com/
+
+# MongoDB (for local development)
+# - MongoDB: v6.0 or higher
+# - MongoDB Compass (optional GUI)
+# - Download from: https://www.mongodb.com/try/download/community
+
+# =============================================================================
+# BACKEND DEPENDENCIES (Backend/package.json)
+# =============================================================================
+
+# Core Dependencies
+express>=4.18.0
+socket.io>=4.7.0
+mongoose>=7.0.0
+jsonwebtoken>=9.0.0
+bcryptjs>=2.4.3
+cors>=2.8.5
+helmet>=7.0.0
+morgan>=1.10.0
+express-rate-limit>=6.7.0
+express-validator>=7.0.0
+compression>=1.7.4
+multer>=1.4.5-lts.1
+dotenv>=16.0.0
+
+# Development Dependencies
+nodemon>=3.0.0
+jest>=29.0.0
+supertest>=6.3.0
+eslint>=8.0.0
+eslint-config-airbnb-base>=15.0.0
+eslint-plugin-import>=2.25.0
+
+# Optional Dependencies (for production)
+# cloudinary>=1.35.0  # For file uploads
+# nodemailer>=6.9.0   # For email notifications
+# redis>=4.6.0        # For caching
+
+# =============================================================================
+# FRONTEND DEPENDENCIES (Frontend/package.json)
+# =============================================================================
+
+# Core Dependencies
+react>=18.2.0
+react-dom>=18.2.0
+react-router-dom>=6.8.0
+socket.io-client>=4.7.0
+@tanstack/react-query>=4.29.0
+react-hook-form>=7.43.0
+@hookform/resolvers>=2.9.0
+zod>=3.21.0
+
+# UI and Styling
+@radix-ui/react-dialog>=1.0.0
+@radix-ui/react-dropdown-menu>=2.0.0
+@radix-ui/react-avatar>=1.0.0
+@radix-ui/react-button>=1.0.0
+@radix-ui/react-input>=1.0.0
+@radix-ui/react-label>=2.0.0
+@radix-ui/react-select>=1.2.0
+@radix-ui/react-tabs>=1.0.0
+@radix-ui/react-tooltip>=1.0.0
+@radix-ui/react-toast>=1.1.0
+@radix-ui/react-alert-dialog>=1.0.0
+@radix-ui/react-checkbox>=1.0.0
+@radix-ui/react-switch>=1.0.0
+@radix-ui/react-scroll-area>=1.0.0
+@radix-ui/react-separator>=1.0.0
+@radix-ui/react-slot>=1.0.0
+
+# Styling
+tailwindcss>=3.3.0
+autoprefixer>=10.4.0
+postcss>=8.4.0
+class-variance-authority>=0.7.0
+clsx>=1.2.0
+tailwind-merge>=1.13.0
+lucide-react>=0.263.0
+
+# Development and Build Tools
+@types/react>=18.2.0
+@types/react-dom>=18.2.0
+@types/node>=18.0.0
+typescript>=5.0.0
+vite>=4.3.0
+@vitejs/plugin-react>=4.0.0
+eslint>=8.0.0
+@typescript-eslint/eslint-plugin>=5.59.0
+@typescript-eslint/parser>=5.59.0
+eslint-plugin-react-hooks>=4.6.0
+eslint-plugin-react-refresh>=0.4.0
+
+# Additional Utilities
+sonner>=1.0.0
+date-fns>=2.30.0
+uuid>=9.0.0
+@types/uuid>=9.0.0
+
+# =============================================================================
+# ENVIRONMENT VARIABLES REQUIRED
+# =============================================================================
+
+# Backend Environment Variables (.env file in Backend/)
+# ----------------------------------------------------
+# NODE_ENV=development
+# PORT=5000
+# MONGODB_URI=mongodb://localhost:27017/realtime-chat
+# JWT_SECRET=your_super_secret_jwt_key_here
+# JWT_EXPIRES_IN=7d
+# FRONTEND_URL=http://localhost:5173
+# RATE_LIMIT_WINDOW_MS=900000
+# RATE_LIMIT_MAX_REQUESTS=100
+
+# Optional Environment Variables
+# SMTP_HOST=smtp.gmail.com
+# SMTP_PORT=587
+# SMTP_USER=your-email@gmail.com
+# SMTP_PASS=your-app-password
+# CLOUDINARY_CLOUD_NAME=your-cloud-name
+# CLOUDINARY_API_KEY=your-api-key
+# CLOUDINARY_API_SECRET=your-api-secret
+
+# Frontend Environment Variables (Frontend/.env)
+# ---------------------------------------------
+# VITE_API_URL=http://localhost:5000
+# VITE_SOCKET_URL=http://localhost:5000
+
+# =============================================================================
+# DATABASE REQUIREMENTS
+# =============================================================================
+
+# MongoDB Database
+# - Version: 6.0 or higher
+# - Collections: users, chats, messages, userrequests
+# - Indexes: phoneNumber (unique), email (sparse), isAdmin
+# - Storage: Minimum 100MB for development, 1GB+ for production
+
+# MongoDB Atlas (Recommended for Production)
+# - Free tier: 512MB storage, shared cluster
+# - Paid tiers: Dedicated clusters, more storage
+# - Network access: Configure IP whitelist
+# - Database user: Create with read/write permissions
+
+# =============================================================================
+# NETWORK REQUIREMENTS
+# =============================================================================
+
+# Ports Required
+# - Backend: 5000 (default)
+# - Frontend: 5173 (default)
+# - MongoDB: 27017 (if running locally)
+
+# Network Access
+# - Local development: localhost access
+# - Production: HTTPS endpoints
+# - CORS: Configured for frontend domain
+# - WebSocket: Socket.IO connection
+
+# =============================================================================
+# SECURITY REQUIREMENTS
+# =============================================================================
+
+# Authentication
+# - JWT tokens with expiration
+# - bcrypt password hashing
+# - OTP verification system
+# - Rate limiting protection
+
+# Data Protection
+# - Input validation and sanitization
+# - CORS protection
+# - Helmet security headers
+# - Environment variable protection
+
+# =============================================================================
+# DEVELOPMENT TOOLS (Optional but Recommended)
+# =============================================================================
+
+# Code Editors
+# - Visual Studio Code (recommended)
+# - Extensions: ESLint, Prettier, TypeScript, Tailwind CSS IntelliSense
+
+# API Testing
+# - Postman or Insomnia
+# - Thunder Client (VS Code extension)
+
+# Database Management
+# - MongoDB Compass (GUI)
+# - Studio 3T (alternative)
+
+# Version Control
+# - Git
+# - GitHub Desktop (optional)
+
+# =============================================================================
+# DEPLOYMENT REQUIREMENTS
+# =============================================================================
+
+# Frontend Deployment (Vercel/Netlify)
+# - Build command: npm run build
+# - Output directory: dist
+# - Environment variables: API URLs
+
+# Backend Deployment (Railway/Render/Heroku)
+# - Node.js environment
+# - Environment variables
+# - MongoDB connection string
+# - Port configuration
+
+# Database Deployment (MongoDB Atlas)
+# - Cluster creation
+# - Network access configuration
+# - Database user creation
+# - Connection string generation
+
+# =============================================================================
+# PERFORMANCE REQUIREMENTS
+# =============================================================================
+
+# Response Times
+# - API endpoints: < 200ms
+# - Real-time messages: < 100ms
+# - Page load: < 2 seconds
+
+# Scalability
+# - Concurrent users: 100+ (development), 1000+ (production)
+# - Message throughput: 1000+ messages/minute
+# - Database connections: 10+ concurrent
+
+# =============================================================================
+# TESTING REQUIREMENTS
+# =============================================================================
+
+# Backend Testing
+# - Jest testing framework
+# - Supertest for API testing
+# - MongoDB memory server for tests
+
+# Frontend Testing
+# - React Testing Library
+# - Jest for unit tests
+# - Cypress for E2E tests (optional)
+
+# =============================================================================
+# MONITORING AND LOGGING
+# =============================================================================
+
+# Application Monitoring
+# - Error tracking (Sentry)
+# - Performance monitoring
+# - User analytics
+
+# Logging
+# - Request logging (Morgan)
+# - Error logging
+# - Debug logging
+
+# =============================================================================
+# INSTALLATION COMMANDS
+# =============================================================================
+
+# Quick Installation
+# ------------------
+# 1. Clone repository
+#    git clone https://github.com/yourusername/realchat2.git
+#    cd realchat2
+
+# 2. Install backend dependencies
+#    cd Backend
+#    npm install
+
+# 3. Install frontend dependencies
+#    cd ../Frontend
+#    npm install
+
+# 4. Set up environment variables
+#    cd ../Backend
+#    copy env.example .env
+#    # Edit .env file with your configuration
+
+# 5. Start MongoDB (if running locally)
+#    mongod
+
+# 6. Create admin user
+#    npm run setup
+
+# 7. Start development servers
+#    # Terminal 1: Backend
+#    npm run dev
+#    
+#    # Terminal 2: Frontend
+#    cd ../Frontend
+#    npm run dev
+
+# =============================================================================
+# TROUBLESHOOTING
+# =============================================================================
+
+# Common Issues
+# -------------
+# 1. Port already in use: Change PORT in .env file
+# 2. MongoDB connection failed: Check MONGODB_URI
+# 3. CORS errors: Verify FRONTEND_URL in .env
+# 4. JWT errors: Check JWT_SECRET configuration
+# 5. Build errors: Clear node_modules and reinstall
+
+# Performance Issues
+# ------------------
+# 1. Slow API responses: Check database indexes
+# 2. Memory leaks: Monitor Node.js memory usage
+# 3. High CPU usage: Optimize database queries
+# 4. Network latency: Use CDN for static assets
+
+# =============================================================================
+# SUPPORT AND RESOURCES
+# =============================================================================
+
+# Documentation
+# - README.md: Main project documentation
+# - DEPLOYMENT_GUIDE.md: Deployment instructions
+# - API documentation: Inline code comments
+
+# Community Support
+# - GitHub Issues: Bug reports and feature requests
+# - Stack Overflow: General questions
+# - Discord/Slack: Real-time support
+
+# Learning Resources
+# - React documentation: https://react.dev/
+# - Node.js documentation: https://nodejs.org/docs/
+# - Socket.IO documentation: https://socket.io/docs/
+# - MongoDB documentation: https://docs.mongodb.com/
+
+# =============================================================================
+# VERSION HISTORY
+# =============================================================================
+
+# Version 1.0.0 (August 2024)
+# - Initial release
+# - Real-time messaging
+# - User authentication
+# - Contact management
+# - Admin panel
+# - Avatar customization
+# - Responsive design
+
+# Future Versions
+# - Voice and video calls
+# - Message encryption
+# - Mobile app
+# - Advanced search
+# - Message threading
+# - Custom themes
+# - Bot integration
+
+# =============================================================================
+# LICENSE AND LEGAL
+# =============================================================================
+
+# License: MIT License
+# Copyright: 2024 RealChat2
+# Author: RealChat2 Team
+# Repository: https://github.com/yourusername/realchat2
+
+# =============================================================================
+# END OF REQUIREMENTS FILE
+# ============================================================================= 
