@@ -1,8 +1,8 @@
-# 🚀 RealChat2 - Real-Time Chat Application
+# 🚀 RealChat - Real-Time Chat Application
 
 <div align="center">
 
-![RealChat2 Logo](https://img.shields.io/badge/RealChat2-Real--Time%20Chat-blue?style=for-the-badge&logo=chat&logoColor=white)
+![RealChat Logo](https://img.shields.io/badge/RealChat2-Real--Time%20Chat-blue?style=for-the-badge&logo=chat&logoColor=white)
 ![React](https://img.shields.io/badge/React-18.0.0-61DAFB?style=for-the-badge&logo=react)
 ![Node.js](https://img.shields.io/badge/Node.js-18.0.0-339933?style=for-the-badge&logo=node.js)
 ![Socket.IO](https://img.shields.io/badge/Socket.IO-4.0.0-010101?style=for-the-badge&logo=socket.io)
@@ -70,30 +70,13 @@
 
 ---
 
-## 🎯 Demo
-
-<div align="center">
-
-### 📱 **Live Demo**
-[![RealChat2 Demo](https://img.shields.io/badge/🚀%20Try%20RealChat2%20Live-Live%20Demo-green?style=for-the-badge&logo=vercel)](https://your-app.vercel.app)
-
-### 🎥 **Demo Screenshots**
-
-| Landing Page | Chat Interface | Admin Panel |
-|--------------|----------------|-------------|
-| ![Landing](https://via.placeholder.com/300x200/4F46E5/FFFFFF?text=Landing+Page) | ![Chat](https://via.placeholder.com/300x200/10B981/FFFFFF?text=Chat+Interface) | ![Admin](https://via.placeholder.com/300x200/F59E0B/FFFFFF?text=Admin+Panel) |
-
-</div>
-
----
-
 ## 🚀 Quick Start
 
 ### **Option 1: Deploy to Production (Recommended)**
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/realchat2.git
-cd realchat2
+git clone https://github.com/DeepjyotiRoy01/RealChat.git
+cd RealChat
 
 # Follow the deployment guide
 # See DEPLOYMENT_GUIDE.md for detailed instructions
@@ -102,8 +85,8 @@ cd realchat2
 ### **Option 2: Run Locally**
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/realchat2.git
-cd realchat2
+git clone https://github.com/DeepjyotiRoy01/RealChat.git
+cd RealChat
 
 # Install dependencies
 npm install
@@ -132,8 +115,8 @@ npm run dev
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/realchat2.git
-   cd realchat2
+   git clone https://github.com/DeepjyotiRoy01/RealChat.git
+   cd RealChat
    ```
 
 2. **Install Dependencies**
@@ -278,8 +261,8 @@ npm run lint:fix    # Fix ESLint issues
    - **Frontend**: http://localhost:5173
    - **Backend API**: http://localhost:5000
    - **Admin Login**: 
-     - Name: `Deep`
-     - Phone: `7005461841`
+     - Name: `Contact Developer`
+     - Phone: `Contact Developer`
 
 3. **Testing**
    ```bash
@@ -358,8 +341,8 @@ npm run lint:fix    # Fix ESLint issues
 ### **For Admins**
 
 1. **Admin Login**
-   - Name: `Deep`
-   - Phone: `7005461841`
+   - Name: `Contact Developer`
+   - Phone: `Contact Developer`
 
 2. **Manage Users**
    - View all users in the system
@@ -413,7 +396,7 @@ npm run lint:fix    # Fix ESLint issues
 ## 📁 Project Structure
 
 ```
-RealChat2/
+RealChat/
 ├── 📁 Frontend/                 # React frontend application
 │   ├── 📁 src/
 │   │   ├── 📁 components/       # Reusable UI components
@@ -483,8 +466,8 @@ We welcome contributions! Please follow these steps:
 
 1. **Fork the Repository**
    ```bash
-   git clone https://github.com/yourusername/realchat2.git
-   cd realchat2
+   git clone https://github.com/DeepjyotiRoy01/RealChat.git
+   cd RealChat
    ```
 
 2. **Create a Feature Branch**
@@ -574,12 +557,7 @@ SOFTWARE.
 
 <div align="center">
 
-**Made with ❤️ by the RealChat2 Team**
-
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername/realchat2)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourusername)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourusername)
-
+**Made with ❤️ by the RealChat Team**
 **⭐ Star this repository if you found it helpful!**
 
 </div> 
